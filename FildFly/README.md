@@ -24,18 +24,18 @@
 
 - Deploy keycloak quickstarts app
   - Install maven
-{{{
+```
     wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -P /tmp
     sudo tar xf /tmp/apache-maven-3.6.0-bin.tar.gz -C /opt
     sudo ln -s /opt/apache-maven-3.6.0 /opt/maven
     sudo ln -s /opt/maven/bin/mvn /usr/bin
-}}}
+```
   -
-  {{{
+```
   git clone https://github.com/keycloak/keycloak-quickstarts
   cd keycloak-quickstarts/app-profile-jee-vanilla
   mvn clean wildfly:deploy
-  }}}
+```
 
 
 - Error: The required mechanism ‘BASIC’ is not available in mechanisms [KEYCLOAK] from the HttpAuthenticationFactory.
@@ -63,11 +63,14 @@
       copy this "text section"
 
   Edit standalone/configuration/standalone.xml
-  {{{
+
+```
     <subsystem xmlns="urn:jboss:domain:keycloak:1.1"/>
+```
 
     to
 
+```
 <subsystem xmlns="urn:jboss:domain:keycloak:1.1">
   <secure-deployment name="WAR MODULE NAME.war">
     <realm>demo</realm>
@@ -77,8 +80,8 @@
     <resource>vanilla</resource>
   </secure-deployment>
 </subsystem>
-
+```
 
 Change "WAR MODULE NAME.war" to "vanilla.war"
-  }}}
+
 
