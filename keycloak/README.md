@@ -1,22 +1,27 @@
-- installation
+# KeyCloak
 
-{{{
+## installation
+
  Download link: https://www.keycloak.org/downloads.html
 
+``` bash
  wget https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz
  tar xvfz keycloak-6.0.1.tar.gz
 
  yum install -y java-1.8.0-openjdk-devel
  systemctl stop firewalld
  systemctl disable firewalld
+```
 
+## start
 
+``` bash
  cd bin
  ./standalone.sh
+```
 
-}}}
+## Initial setup add admin user
 
-- Initial setup add admin user
   ./add-user-keycloak.sh -u root
   Password: password
 

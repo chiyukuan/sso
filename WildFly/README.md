@@ -1,13 +1,17 @@
+# WildFly
+
+  WilfFly is a java based application server.
+
  WildFly is bundled with keycload.
  - run a separate instance on same machine as the Keycloak server to run your java servlet application.
  - Run keycload at port 8888 and WildFly at port 8080, jboss.socket.binding.port-offset
 
-- Install wildfly
+## Install wildfly
   Download: wget https://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.tar.gz
   tar xvfz wildfly-17.0.1.Final.tar.gz -C /opt
 
 
-- Installing the Client Adapter
+## Installing the Client Adapter
   - OPENID Connection: https://downloads.jboss.org/keycloak/6.0.1/adapters/keycloak-oidc/keycloak-wildfly-adapter-dist-6.0.1.tar.gz
 
   cd /opt/wildfly-17.0.1.Final
@@ -22,7 +26,7 @@
   ./jboss-cli.sh --file=adapter-elytron-install-offline.cli
 
 
-- Deploy keycloak quickstarts app
+## Deploy keycloak quickstarts app
   - Install maven
 ```
     wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -P /tmp
@@ -38,7 +42,9 @@
 ```
 
 
-- Error: The required mechanism ‘BASIC’ is not available in mechanisms [KEYCLOAK] from the HttpAuthenticationFactory.
+## Error:
+
+* The required mechanism ‘BASIC’ is not available in mechanisms [KEYCLOAK] from the HttpAuthenticationFactory.
 
   Edit /opt/wildfly-11.0.0.Final/standalone/configuration/standalone.xml and change KEYCLOACK TO BASIC
 
