@@ -2,7 +2,7 @@
 
 ## installation
 
- Download link: https://www.keycloak.org/downloads.html
+Download link: <https://www.keycloak.org/downloads.html>
 
 ``` bash
  wget https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz
@@ -28,24 +28,21 @@
 - Admin console
   start keycloak -b 0.0.0.0 port: 8888
 
-  sso 192.168.146.128
-  http://sso:8888/auth/admin
-
+  <http://sso:8888/auth/admin>
 
   - create Realm
-    From Master drop-down menu, click "Add Realm"
-    Name: demo
-    Click: "Create"
+    - From Master drop-down menu, click "Add Realm"
+    - Name: demo
+    - Click: "Create"
 
   - Add User under demo Realm
-    From Master drop-down menu, select "demo" Realm
-    click "Users"
-    click "Add User"
-    Username: foo
-    click "Save"
+    - From Master drop-down menu, select "demo" Realm
+    - click "Users"
+    - click "Add User"
+    - Username: foo
+    - click "Save"
 
-    Click Credentials, enter password and Click "Reset password"
+    - Click Credentials, enter password and Click "Reset password"
 
 - User Account Service @ demo realm
-  http://sso:8888/auth/realm/demo/account
-
+  <http://sso:8888/auth/realm/demo/account>
