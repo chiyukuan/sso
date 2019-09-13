@@ -64,6 +64,7 @@ systemctl status openvpn@server
 ## Setup OpenVPN Client
 
 Edit the [/etc/openvpn/client/openvpn-client.ovpn](./openvpn-client.ovpn)
+Client need client.crt client.key ca.crt client.ovpn 4 files for VPN connections. **Need to verify it**
 
 - pack client files at openvpn-server
 ``` bash
