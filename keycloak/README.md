@@ -22,8 +22,7 @@ Download link: <https://www.keycloak.org/downloads.html>
 
 ## Initial setup add admin user
 
-  ./add-user-keycloak.sh -u root
-  Password: password
+  ./add-user-keycloak.sh -u root -p password
 
 - Admin console
   start keycloak -b 0.0.0.0 port: 8888
@@ -35,6 +34,12 @@ Download link: <https://www.keycloak.org/downloads.html>
     - Name: demo
     - Click: "Create"
 
+  - create Roles
+    - From Master drop-down menu, select "demo" Realm
+    - click "Roles"
+    - click "Add Role"
+    - Rolename: user
+    - click "Save"
   - Add User under demo Realm
     - From Master drop-down menu, select "demo" Realm
     - click "Users"
@@ -43,6 +48,7 @@ Download link: <https://www.keycloak.org/downloads.html>
     - click "Save"
 
     - Click Credentials, enter password and Click "Reset password"
+    - Click "Role Mappings", add "user" to assigned Roles
 
 - User Account Service @ demo realm
-  <http://sso:8888/auth/realm/demo/account>
+  <http://sso:8888/auth/realms/demo/account>
