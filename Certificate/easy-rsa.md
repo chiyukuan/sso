@@ -1,5 +1,8 @@
 # easy-rsa: Simple Shell based CA utility
 
+## Resource
+- [easy-rsa cmd options](https://github.com/OpenVPN/easy-rsa/issues/73)
+
 ## installation
 
 ``` bash

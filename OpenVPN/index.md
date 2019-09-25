@@ -31,6 +31,18 @@ cp /usr/share/easy-rsa/3/pki/dh.pem /etc/openvpn/server/
 cp /usr/share/easy-rsa/3/pki/crl.pem /etc/openvpn/server/
 ```
 
+## Keys
+```
+Filename	Needed By	              Purpose	                Secret
+ca.crt	    server + all clients	  Root CA certificate	    NO
+ca.key	    key signing machine only  Root CA key	            YES
+dh{n}.pem	server only	              Diffie Hellman parameters	NO
+server.crt	server only	              Server Certificate	    NO
+server.key	server only	              Server Key	            YES
+client1.crt	client1 only	          Client1 Certificate	    NO
+client1.key	client1 only	          Client1 Key	            YES
+```
+
 ## Configure OpenVPN
 
 Edit the [/etc/openvpn/server.conf](./server.conf)
